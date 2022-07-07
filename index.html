@@ -2,6 +2,9 @@
 <html>
 <body>
 <h1>Itkua</h1>
-<p> 11.06.2019</p>
+<p id="itkua"></p>
 </body>
 </html>
+<script>
+document.getElementById("itkua").innerHTML = ((date.now() - date.parse("2019-06-11")) / (1000 * 3600 * 24));
+</script>
