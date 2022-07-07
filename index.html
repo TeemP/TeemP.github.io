@@ -1,14 +1,20 @@
 <!DOCTYPE html>
+<head>
+    <style>
+        h1 { text-align: center; color: white; }
+        body {background-color: black;}
+    </style>
+</head>
 <html>
 <body onload="javascript:calculateItkua()">
-<h1>Itkua</h1>
-<p id="itkua"></p>
+<h1 id="itkua"></h1>
 </body>
 </html>
 <script type = "text/javascript">
 function calculateItkua(){
-  var current_date = new date.now();
+  var current_date = Date.now();
   var begin_date = new Date("11/07/2019");
-  document.getElementById("itkua").innerHTML = ((current_date - begin_date) / (1000 * 3600 * 24));
+  var itkua = Math.ceil(((current_date - begin_date) / (1000 * 3600 * 24)));
+  document.getElementById("itkua").innerHTML = itkua + " päivää itkua";
 }
 </script>
