@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body onload="javascript:calculateItkua()">
 <h1>Itkua</h1>
 <p id="itkua"></p>
 </body>
 </html>
-<script>
-document.getElementById("itkua").innerHTML = ((date.now() - date.parse("2019-06-11")) / (1000 * 3600 * 24));
+<script type = "text/javascript">
+function calculateItkua(){
+  var current_date = new date.now();
+  var begin_date = new Date("11/07/2019");
+  document.getElementById("itkua").innerHTML = ((current_date - begin_date) / (1000 * 3600 * 24));
+}
 </script>
